@@ -4,8 +4,8 @@ const clearCartBtn = document.querySelector(".clear-cart");
 const cartDOM = document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-item");
-const cartTotal = document.querySelector("cart-total");
-const cartContent = document.querySelector("cart-content");
+const cartTotal = document.querySelector(".cart-total");
+const cartContent = document.querySelector(".cart-content");
 const productDOM = document.querySelector(".products-center");
 
 let cart = [];
