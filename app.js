@@ -75,6 +75,7 @@ class UI {
           // set cart values
           this.setCartValue(cart);
           // display cart item
+          this.addCartItem(cartItem);
           // show the cart
         });
       }
@@ -89,7 +90,26 @@ class UI {
     });
     cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
     cartItems.innerText = itemsTotal;
-    console.log(cartTotal, cartItems);
+  }
+  addCartItem(item) {
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+    div.innerHTML = `
+      <div class="cart-item">
+        <img src=${item.image} alt="product">
+        <div>
+          <h4>${item.title}</h4>
+          <h5>$${item.price}</h5>
+          <span class="remove-item" data-id=${item.id}>remove</span>
+        </div>
+        <div>
+          <i class="fa fa-chevron-up" data-id=${item.id}></i>
+          <p class="item-amount">${item.amount}</p>
+          <i class="fa fa-chevron-down" data-id=${item.id}></i>
+        </div>
+      </div>
+    `;
+    cartContent.appendChild(div);
   }
 }
 
