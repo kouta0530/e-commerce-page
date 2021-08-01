@@ -96,7 +96,6 @@ class UI {
     const div = document.createElement("div");
     div.classList.add("cart-item");
     div.innerHTML = `
-      <div class="cart-item">
         <img src=${item.image} alt="product">
         <div>
           <h4>${item.title}</h4>
@@ -108,7 +107,6 @@ class UI {
           <p class="item-amount">${item.amount}</p>
           <i class="fa fa-chevron-down" data-id=${item.id}></i>
         </div>
-      </div>
     `;
     cartContent.appendChild(div);
   }
